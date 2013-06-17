@@ -1,6 +1,11 @@
 <?php
 	include_once('inc/PHPWord/PHPWord.php');
-	$PHPWord = new PHPWord();
+	include_once('classes/classParser.php');
+	
+	$parser = new Parser();
+	$parser->loadData('test_scores/White Christmas.xml');
+	//$parser->getScoreParts();
+	/*$PHPWord = new PHPWord();
 	//Adding style
 	$garis = array('name'=>'aagaris','size'=>10);
 	$huruf = array('name'=>'aahuruf','size'=>10);
@@ -17,5 +22,5 @@
 	$section->addText('Hello World','huruf','par');
 	$section->addText('Ini cuma coba-coba','huruf','par');
 	$objWriter = PHPWord_IOFactory::createWriter($PHPWord, 'Word2007');
-	$objWriter->save('helloWorld.docx');
+	$objWriter->save('helloWorld.docx');*/
 ?>
